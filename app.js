@@ -2,6 +2,8 @@ const express = require('express');
 const mongoose = require('mongoose');
 var cors = require('cors')
 
+const PORT = process.env.PORT || 3000;
+
 
 const ToDoSchema = require('./schemas/ToDoSchema');
 
@@ -55,4 +57,4 @@ server.delete('/todo/:id', async (req, res) => {
 })
 
 
-server.listen(3333, () => console.log('Servidor iniciado em http://localhost:3333'))
+server.listen(PORT, () => console.log('Servidor iniciado em http://localhost:3333' + PORT))
